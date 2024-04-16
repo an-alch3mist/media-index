@@ -133,10 +133,10 @@ body
 	border-radius: 8px;
 }
 
-.input-text > input
+.input-text > .input
 {
 	display: block;
-	flex: 100%;
+	flex: 1 1 auto;
 	padding: 14px 20px;
 
 	background-color: transparent;
@@ -150,6 +150,7 @@ body
 
 	border: none;
 
+	min-width: 0px;
 }
 
 .input-text > input::placeholder
@@ -161,7 +162,7 @@ body
 .input-text > .enter
 {
 	text-align: center;
-/*	flex: 110px;*/
+
 	padding: 14px 20px;
 	background-color: transparent;
 
@@ -169,15 +170,16 @@ body
 	font-family: var(--font);
 	font-weight: bold;
 	font-size: 0.8rem;
-	white-space: nowrap;
+/*	white-space: nowrap;*/
 
 	visibility: hidden;
+
 }
 
 .input-text > .search
 {
 	text-align: center;
-/*	flex: 30px;*/
+
 	padding: 14px 20px;
 	background-color: transparent;
 
@@ -185,6 +187,8 @@ body
 	font-family: var(--font);
 	font-weight: bold;
 	font-size: 1rem;
+
+
 }
 
 
@@ -214,7 +218,7 @@ body
 <body>
 
 <div class="input-text">
-	<input type="text" maxlength="50" name="" placeholder="Search thousands of apps" oninput="document.querySelector('.enter').style.visibility='auto'">
+	<input class="input" type="text" maxlength="50" name="" placeholder="Search thousands of apps" oninput="document.querySelector('.enter').style.visibility='visible'">
 	<div class="enter">Enter to search</div>
 	<div class="search">@</div>
 </div>
